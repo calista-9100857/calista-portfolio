@@ -1,184 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Calista Tan | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calista Tan | Portfolio</title>
 
-        header {
-            background: #1f2937;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header p {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #d1d5db;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #1f2937;
+}
 
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+nav {
+    background: white;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        h2 {
-            border-left: 5px solid #2563eb;
-            padding-left: 10px;
-            margin-bottom: 20px;
-        }
+nav h3 {
+    font-weight: 600;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
-        }
+nav a {
+    text-decoration: none;
+    color: #1f2937;
+    margin-left: 20px;
+    font-size: 14px;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+nav a:hover {
+    color: #2563eb;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1f2937;
-            color: white;
-            font-size: 14px;
-        }
+.hero {
+    background: linear-gradient(135deg, #1e293b, #2563eb);
+    color: white;
+    padding: 80px 10%;
+    text-align: center;
+}
 
-        .tag {
-            display: inline-block;
-            background: #e0e7ff;
-            color: #1e3a8a;
-            padding: 5px 10px;
-            margin: 5px 5px 0 0;
-            border-radius: 5px;
-            font-size: 13px;
-        }
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+section {
+    padding: 60px 10%;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #2563eb;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.skills span {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #1e3a8a;
+    padding: 6px 12px;
+    margin: 5px 8px 5px 0;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1e293b;
+    color: white;
+    font-size: 14px;
+}
+
+.contact a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 768px){
+    nav {
+        flex-direction: column;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Calista Tan</h1>
-    <p>Aspiring Full-Stack Developer | Python • Flask • MySQL</p>
-</header>
+<nav>
+    <h3>Calista Tan</h3>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-<section>
-    <h2>About Me</h2>
+<div class="hero">
+    <h1>Aspiring Full-Stack Developer</h1>
+    <p>Python • Flask • MySQL • Web Application Development</p>
+</div>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
     <div class="card">
         <p>
-            I am currently a student in the Common ICT Programme at Nanyang Polytechnic. 
-            I have foundational experience in full-stack web development using Python, Flask, 
-            MySQL, and frontend technologies. I am passionate about building structured, 
-            reliable, and user-focused web applications.
+            I am currently pursuing the Common ICT Programme at Nanyang Polytechnic.
+            I specialize in backend development using Python and Flask, with hands-on
+            experience building full-stack web applications integrated with MySQL.
+            I focus on writing structured, reliable, and scalable code.
         </p>
     </div>
 </section>
 
-<section>
-    <h2>Technical Skills</h2>
-    <div class="card">
-        <span class="tag">Python</span>
-        <span class="tag">Flask</span>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Bootstrap</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">Git</span>
-        <span class="tag">GitHub</span>
-        <span class="tag">Power BI</span>
-        <span class="tag">Figma</span>
+<section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="card skills">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Bootstrap</span>
+        <span>MySQL</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Power BI</span>
+        <span>Figma</span>
     </div>
 </section>
 
-<section>
-    <h2>Project: Meod Farm Groupbuy System</h2>
+<section id="project">
+    <h2 class="section-title">Featured Project</h2>
 
     <div class="card">
-        <h3>Project Overview</h3>
-        <p>
-            A web-based groupbuy management system developed in a team of five over two semesters. 
-            The system centralizes order tracking, groupbuy management, and role-based access 
-            for buyers, leaders, and staff.
-        </p>
-        <p><strong>Technologies Used:</strong> Flask, Python, MySQL, HTML, CSS, JavaScript, Bootstrap</p>
+        <h3>Meod Farm Groupbuy System</h3>
+        <p><strong>Team Size:</strong> 5 | <strong>Duration:</strong> 2 Semesters</p>
+        <p><strong>Technologies:</strong> Flask, Python, MySQL, HTML, CSS, JavaScript</p>
     </div>
 
     <div class="card">
-        <h3>My Role – Order Management Developer</h3>
+        <h4>My Role – Order Management Developer</h4>
         <ul>
-            <li>Developed full CRUD functionality for order processing.</li>
-            <li>Implemented role-based access control:
-                <ul>
-                    <li>Buyer – View, edit quantity, cancel own orders</li>
-                    <li>Leader – View orders under created groupbuy</li>
-                    <li>Staff – View all groupbuy orders</li>
-                </ul>
-            </li>
+            <li>Developed full CRUD functionality for order management.</li>
+            <li>Implemented role-based access for Buyer, Leader, and Staff.</li>
             <li>Integrated MySQL database with Flask backend.</li>
-            <li>Implemented frontend and backend validation.</li>
-            <li>Collaborated with teammates using GitHub version control.</li>
+            <li>Applied frontend and backend validation for data integrity.</li>
+            <li>Collaborated via GitHub for seamless module integration.</li>
         </ul>
     </div>
 
     <div class="card">
-        <h3>Key Features</h3>
+        <h4>Key Achievements</h4>
         <ul>
-            <li>Create, Retrieve, Update, Delete (CRUD) Orders</li>
-            <li>Session-based role restriction</li>
-            <li>Data validation for quantity and required fields</li>
-            <li>Structured debugging and incremental testing</li>
+            <li>Built structured session-based access control system.</li>
+            <li>Ensured stable database integration across modules.</li>
+            <li>Delivered a fully functional, integrated team application.</li>
         </ul>
     </div>
 
     <div class="card">
-        <h3>Challenges & Learning</h3>
-        <p><strong>Challenge:</strong> Connecting MySQL database to Flask backend and ensuring small code changes did not break system flow.</p>
-        <p><strong>Solution:</strong> Debugged step-by-step, tested incrementally, and coordinated closely with teammates to maintain integration stability.</p>
-        <p><strong>Key Learning:</strong> Built my first fully functional web system and learned how backend, database, and frontend layers integrate in real-world development.</p>
+        <h4>Challenges & Learning</h4>
+        <p>
+            Faced challenges connecting MySQL to Flask and ensuring system stability
+            during updates. Improved debugging skills by testing incrementally and
+            reviewing code carefully before deployment.
+        </p>
     </div>
+
 </section>
 
-<section>
-    <h2>Contact</h2>
-    <div class="card">
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="card contact">
         <p>Email: <a href="mailto:calistatan46@gmail.com">calistatan46@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/calista-tan-1278a53ab" target="_blank">
-            www.linkedin.com/in/calista-tan-1278a53ab</a></p>
+        <p>LinkedIn: 
+            <a href="https://www.linkedin.com/in/calista-tan-1278a53ab" target="_blank">
+                linkedin.com/in/calista-tan-1278a53ab
+            </a>
+        </p>
     </div>
 </section>
 
 <footer>
-    © 2026 Calista Tan | Portfolio
+    © 2026 Calista Tan | Portfolio Website
 </footer>
 
 </body>
