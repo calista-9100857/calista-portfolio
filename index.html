@@ -157,6 +157,25 @@
     transform: scale(1.05);
 }
 
+.screenshots-grid .vertical-container {
+    display: flex;
+    flex-direction: column; /* Stack images top to bottom */
+    align-items: center;    /* Center images horizontally */
+    gap: 15px;              /* Space between images */
+}
+
+.screenshots-grid .vertical-container img {
+    width: 60%;             /* Make image smaller, adjust % as needed */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.screenshots-grid .vertical-container img:hover {
+    transform: scale(1.05);
+}
+
+
     </style>
     </head>
 
@@ -249,13 +268,14 @@
 <section id="screenshots">
     <h2 class="section-title">Project Screenshots</h2>
     <div class="card screenshots-grid">
-        <div class="grid-container">
+        <div class="vertical-container">
             <img src="buyer.png" alt="Buyer Page">
             <img src="leader.png" alt="Leader Page">
             <img src="staff.png" alt="Staff Page">
         </div>
     </div>
 </section>
+
 
 
 
